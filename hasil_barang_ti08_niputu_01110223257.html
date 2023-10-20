@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Form Pesanan Barang</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        .column {
+          float: left;
+          width: 50%;
+          padding: 10px;
+          height: 300px;
+          width: 300px;
+        }
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+                <img src="album.png" alt="album" style="border: solid;"> 
+        </div>
+        <div class="column">
+        <table>
+            <tr>
+                <td> Title Here : </td>
+                <td> Jungkook Album's Seven</td>
+            </tr>
+
+            <tr>
+                <td>Description : </td>
+                <td>Year : 2023</td>
+            </tr>
+
+            <tr>
+                <td> Total Amount : </td>
+                <td> Rp 500.000</td>
+            </tr>
+
+            <tr>
+                <td> Pay To : </td>
+                <td>123-0878-225</td>
+            </tr>
+
+            <tr>
+                <td><label>Payment Type :</label></td>
+                <td> 
+                    <select id="Bank">
+                        <option value="visa debit">Visa Debit</option>
+                        <option value="credit card">Credit Card</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Account Holder :</td>
+                <td><input type="text" name=" account holder" placeholder="Name Here"></td>
+            </tr>
+
+            <tr>
+                <td>Account No :</td>
+                <td><input type="text" name=" account no" placeholder="123-0878-225"></td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <input type="checkbox" name="transaction" value="send to mobile phone">
+                    <label for="transaction"> Send to Mobile Phone</label><br>
+                    <input type="checkbox" name="transaction" value="send to email">
+                    <label for="transaction"> Send to Email</label><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Send to Mobile Phone :</td>
+                <td><input type="number " name="phone" placeholder=""></td>
+            </tr>
+
+            <tr>
+                <td><label>Send to Email :</label></td>
+                <td><input type="email" name="email" placeholder=""></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="Pay using QuidLink" name="tombol"></td>
+            </tr>
+
+        </table>
+        </div>
+    </div>
+</body>
+</html>
