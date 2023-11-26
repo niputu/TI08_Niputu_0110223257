@@ -1,0 +1,46 @@
+body {
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    background-color: pink;
+    width: 25%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.row1 {
+    width: 75%;
+}
+
+.row2 {
+    display: flex;
+    min-height: 80vh;
+}
+
+.header {
+    background-color: yellow;
+    height: 10vh;
+}
+
+.article {
+    width: 75%;
+    flex-direction: column;
+}
+
+.aside {
+    width: 25%;
+    background-color: aqua;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: yellow;
+    height: 10vh;
+}

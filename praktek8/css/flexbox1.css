@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: aqua;
+    justify-content: space-between ;
+    display: flex;
+    padding: 10px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav ul li{
+    margin: 0 1rem;
+}
+.logo{
+    width: 10rem;
+}
