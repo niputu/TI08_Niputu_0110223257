@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Menghitung Biaya Parkir</h1>
+    <div>
+      <label for="masuk">Jam Masuk</label>
+      <input type="number" id="masuk" />
+
+      <label for="keluar">Jam keluar</label>
+      <input type="number" id="keluar" onchange="biayaParkir()" />
+
+      <!--<button>Hitung Biaya</button>-->
+    </div>
+
+    <p>Durasi : <span id="hasilDurasi">0</span> Jam</p>
+    <p>Biaya Parkir : Rp. <span id="totalBiaya">0</span></p>
+
+    <script>
+      function biayaParkir() {
+        //tangkap inputan user
+        let masuk = document.querySelector("#masuk").value;
+        let keluar = document.querySelector("#keluar").value;
+
+        //hitung durasi parkir
+        let durasi = keluar - masuk;
+
+        let biaya = 3000;
+
+        //looping durasi untuk mengihitung biaya
+        for (let i = 2; i < durasi; i++) {
+          biaya += 1000;
+        }
+
+        //tangkap elemen untuk menampilan hasil
+        let hasilDurasi = document.querySelector("#hasilDurasi");
+        let totalBiaya = document.querySelector("#totalBiaya");
+
+        //tampilkan hasil
+        hasilDurasi.innerHTML = durasi;
+        totalBiaya.innerHTML = biaya;
+      }
+    </script>
+  </body>
+</html>

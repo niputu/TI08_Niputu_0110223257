@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="money" id="">
+    <select name="kurs" id="">
+        <option value="usd">USD | Rp.14650</option>
+        <option value="eur">EUR | Rp.17000</option>
+        <option value="sgd">SGD | Rp.15300</option>
+    </select>
+    <button onclick="convert()">Convert</button>
+
+    <p id="result"></p>
+
+    <script>
+        const money = document.getElementsByName("money")
+        const kurs = document.getElementsByName("kurs")
+        const result = document.getElementById("result")
+
+        function convert(money, kurs){
+            if(kurs.value == "usd"){
+                result.innerHTML = "Hasil : Rp." + money.value * 14650
+            }
+            else if (kurs.value == "eur"){
+                result.innerHTML = "Hasil : Rp." + money.value * 17000
+            }
+            else (kurs.value == "sgd"){
+                result.innerHTML = "Hasil : Rp." + money.value * 15300
+            }
+        }
+    </script>
+</body>
+</html>

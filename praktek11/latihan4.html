@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menghitung Jumlah Dua Bilangan</title>
+  </head>
+  <body>
+    <h1>Menghitung Jumlah Dua Bilangan</h1>
+
+    <label for="bil1">Bilangan 1 :</label>
+    <input type="number" id="bil1" name="bil1" onchange="hitungPenjumlahan()" />
+    <br /><br />
+
+    <label for="bil2">Bilangan 2 :</label>
+    <input type="number" id="bil2" name="bil2" onchange="hitungPenjumlahan()" />
+    <br /><br />
+
+    <p>Hasil Penjumlahan : <span id="hasil"></span></p>
+
+    <script>
+      function hitungPenjumlahan() {
+        let bilangan1 = document.getElementById("bil1").value;
+        let bilangan2 = document.getElementById("bil2").value;
+
+        let hasilPenjumlahan = parseFloat(bilangan1) + parseFloat(bilangan2);
+
+        document.getElementById("hasil").innerText = hasilPenjumlahan;
+      }
+    </script>
+  </body>
+</html>
