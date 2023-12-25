@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Form</legend>
+      <form id="form">
+        <label for="nama">Nama : </label>
+        <input type="text" id="nama" required maxlength="30" />
+
+        <br />
+
+        <label for="email">Email : </label>
+        <input type="email" id="email" required />
+
+        <br />
+
+        <label for="jam">Jam :</label>
+        <input type="time" id="jam" required />
+
+        <br />
+
+        <label for="tujuan">Tujuan : </label>
+        <input type="text" id="tujuan" required />
+
+        <br />
+
+        <label for="tiket">Tiket :</label>
+        <input type="number" id="tiket" required min="1" max="10" />
+
+        <br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </fieldset>
+
+    <div>
+      <p>Nama : <span id="hasil_nama"></span></p>
+      <p>Email : <span id="hasil_email"></span></p>
+      <p>Jam : <span id="hasil_jam"></span></p>
+      <p>Tujuan : <span id="hasil_tujuan"></span></p>
+      <p>Tiket : <span id="hasil_tiket"></span></p>
+    </div>
+
+    <script>
+      document.getElementById('form').addEventListener('submit', function (event) {event.preventDefault();
+
+          let nama = document.getElementById('nama').value;
+          let email = document.getElementById('email').value;
+          let jam = document.getElementById('jam').value;
+          let tujuan = document.getElementById('tujuan').value;
+          let tiket = document.getElementById('tiket').value;
+
+          document.getElementById('hasil_nama').innerText = nama;
+          document.getElementById('hasil_email').innerText = email;
+          document.getElementById('hasil_jam').innerText = jam;
+          document.getElementById('hasil_tujuan').innerText = tujuan;
+          document.getElementById('hasil_tiket').innerText = tiket;
+        });
+    </script>
+  </body>
+</html>

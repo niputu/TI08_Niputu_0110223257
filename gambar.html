@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambar</title>
+</head>
+<body>
+    <select id="pilih" onchange="gambar()">
+        <option>Pilih Gambar</option>
+        <option value="images/burung1.png">Burung 1</option>
+        <option value="images/burung2.png">Burung 2</option>
+        <option value="images/burung3.png">Burung 3</option>
+        <option value="images/burung4.png">Burung 4</option>
+        <option value="images/burung5.png">Burung 5</option>
+        <option value="images/burung6.png">Burung 6</option>
+    </select>
+
+    <br>
+
+    <img id="gambar" scr="" alt="">
+
+    <script>
+        function gambar(){
+            let gambar = document.getElementById('pilih').value
+            document.getElementById('gambar').src = gambar
+        }
+    </script>
+
+</body>
+</html>
